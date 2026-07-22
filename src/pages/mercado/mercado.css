@@ -1,0 +1,291 @@
+.mercado-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mercado-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.mercado-refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  border: 0;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #4968ee, #4f46e5);
+  cursor: pointer;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.22);
+}
+
+.mercado-refresh:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.mercado-refresh svg {
+  font-size: 19px;
+}
+
+.mercado-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px;
+  color: #a1272f;
+  border: 1px solid #ffd2d5;
+  border-radius: 16px;
+  background: #fff2f3;
+}
+
+.mercado-error strong,
+.mercado-error span {
+  display: block;
+}
+
+.mercado-error span {
+  flex: 1;
+  margin-top: 3px;
+  font-size: 13px;
+}
+
+.mercado-error button {
+  min-height: 38px;
+  padding: 0 14px;
+  color: #a1272f;
+  font-weight: 800;
+  border: 1px solid #ffc1c6;
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.mercado-table-section {
+  padding: 26px;
+  border: 1px solid #e7ecf3;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 14px 35px rgba(20, 35, 60, 0.06);
+}
+
+.mercado-table-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.mercado-table-header__eyebrow {
+  display: block;
+  margin-bottom: 5px;
+  color: #4f46e5;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.mercado-table-header h2 {
+  margin: 0;
+  color: #172b4d;
+  font-size: 24px;
+}
+
+.mercado-table-header p {
+  margin: 7px 0 0;
+  color: #758397;
+  font-size: 13px;
+}
+
+.mercado-search {
+  width: 420px;
+  max-width: 100%;
+}
+
+.mercado-company {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 190px;
+}
+
+.mercado-company__avatar {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 12px;
+  place-items: center;
+  background: linear-gradient(135deg, #4968ee, #7c3aed);
+}
+
+.mercado-company div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.mercado-company strong {
+  overflow: hidden;
+  max-width: 210px;
+  color: #213249;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mercado-company small {
+  overflow: hidden;
+  max-width: 210px;
+  margin-top: 3px;
+  color: #8794a6;
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mercado-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 27px;
+  padding: 0 10px;
+  font-size: 10px;
+  font-weight: 900;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.mercado-status--novo {
+  color: #315d9d;
+  background: #edf4ff;
+}
+
+.mercado-status--interessado {
+  color: #176d4b;
+  background: #e9f9f1;
+}
+
+.mercado-status--beta {
+  color: #6538ae;
+  background: #f3ebff;
+}
+
+.mercado-status--potencial {
+  color: #a15b06;
+  background: #fff4df;
+}
+
+.mercado-status--cliente {
+  color: #176d4b;
+  background: #dcf9ea;
+}
+
+.mercado-view-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 0 11px;
+  color: #4f46e5;
+  font-size: 11px;
+  font-weight: 900;
+  border: 1px solid #d8dcff;
+  border-radius: 10px;
+  background: #f6f7ff;
+  cursor: pointer;
+  transition: 180ms ease;
+}
+
+.mercado-view-button:hover {
+  color: #ffffff;
+  border-color: #4f46e5;
+  background: #4f46e5;
+}
+
+.mercado-view-button svg {
+  font-size: 16px;
+}
+
+.mercado-loading,
+.mercado-empty {
+  display: flex;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mercado-loading {
+  color: #78879a;
+  font-size: 14px;
+}
+
+.mercado-empty svg {
+  font-size: 54px;
+  color: #aab5c4;
+}
+
+.mercado-empty h3 {
+  margin: 15px 0 7px;
+  color: #263850;
+}
+
+.mercado-empty p {
+  max-width: 480px;
+  margin: 0;
+  color: #8390a1;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.mercado-table-footer {
+  padding: 17px 4px 0;
+  color: #8996a7;
+  font-size: 12px;
+  text-align: right;
+}
+
+@media (max-width: 1200px) {
+  .mercado-cards {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .mercado-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mercado-table-section {
+    padding: 18px;
+  }
+
+  .mercado-table-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .mercado-search {
+    width: 100%;
+  }
+
+  .mercado-error {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

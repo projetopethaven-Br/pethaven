@@ -1,0 +1,241 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 22px 16px 18px;
+  background:
+    radial-gradient(circle at 18% 5%, rgba(79, 70, 229, 0.09), transparent 28%),
+    #ffffff;
+}
+
+.sidebar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+  padding: 6px 10px 24px;
+  color: inherit;
+  text-align: left;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.sidebar-brand img,
+.sidebar-brand svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.sidebar-brand span {
+  color: #7b8799;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.sidebar-navigation {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-section-title {
+  padding: 4px 13px 8px;
+  color: #9aa5b5;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.sidebar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 46px;
+  padding: 10px 13px;
+  color: #516074;
+  text-decoration: none;
+  border-radius: 14px;
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.sidebar-link::before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -16px;
+  width: 4px;
+  content: "";
+  border-radius: 0 999px 999px 0;
+  background: transparent;
+}
+
+.sidebar-link:hover {
+  color: #3d4ce0;
+  background: #f1f4ff;
+  transform: translateX(2px);
+}
+
+.sidebar-link--active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #4968ee 0%, #4f46e5 100%);
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.24);
+}
+
+.sidebar-link--active::before {
+  background: #6d5dfc;
+}
+
+.sidebar-link__icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 24px;
+  place-items: center;
+}
+
+.sidebar-link__icon svg {
+  font-size: 21px;
+}
+
+.sidebar-link__label {
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  margin-top: 18px;
+  border-top: 1px solid #e9edf4;
+}
+
+.sidebar-profile {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 7px;
+  color: inherit;
+  text-align: left;
+  border: 0;
+  border-radius: 13px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 180ms ease;
+}
+
+.sidebar-profile:hover {
+  background: #f5f7fb;
+}
+
+.sidebar-profile__avatar {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 50%;
+  place-items: center;
+  background: linear-gradient(135deg, #4f6ff3, #4f46e5);
+}
+
+.sidebar-profile__copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.sidebar-profile__copy strong {
+  overflow: hidden;
+  color: #142033;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-profile__copy small {
+  overflow: hidden;
+  color: #8090a4;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar-logout {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  color: #8b98aa;
+  border: 0;
+  border-radius: 12px;
+  place-items: center;
+  background: transparent;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background 180ms ease;
+}
+
+.sidebar-logout:hover {
+  color: #e5484d;
+  background: #fff0f0;
+}
+
+.sidebar-logout svg {
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    padding-inline: 12px;
+  }
+
+  .sidebar-brand {
+    align-items: center;
+    padding-inline: 0;
+  }
+
+  .sidebar-brand svg,
+  .sidebar-brand img {
+    width: 58px !important;
+    max-width: 58px;
+  }
+
+  .sidebar-brand span,
+  .sidebar-section-title,
+  .sidebar-link__label,
+  .sidebar-profile__copy {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .sidebar-footer {
+    flex-direction: column;
+  }
+
+  .sidebar-profile {
+    flex: 0 0 auto;
+  }
+}

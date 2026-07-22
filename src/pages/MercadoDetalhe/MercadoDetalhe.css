@@ -1,0 +1,29 @@
+.mercado-detalhe{
+
+    padding:35px;
+
+}
+
+.mercado-detalhe h1{
+
+    margin-bottom:25px;
+
+    color:#1e293b;
+
+}
+
+.mercado-detalhe strong{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:12px 18px;
+
+    background:#eef2ff;
+
+    border-radius:10px;
+
+    color:#4f46e5;
+
+}

@@ -1,0 +1,14 @@
+PETHAVEN - Assets
+
+1. Copie a pasta 'src/assets' para o seu projeto substituindo os arquivos.
+2. Copie 'public/favicon.png' para a pasta public.
+3. Se o projeto ainda usar .svg, altere os imports:
+   logo.svg -> logo.png
+   react.svg -> logo-icon.png (se desejar)
+   vite.svg -> hero.png (se desejar)
+
+Arquivos:
+- logo.png
+- logo-icon.png
+- hero.png
+- favicon.png

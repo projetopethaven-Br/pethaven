@@ -1,0 +1,15 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /pesquisas/{pesquisaId} {
+      allow create: if
+        request.resource.data.empresa.estabelecimento is string
+        && request.resource.data.empresa.responsavel is string
+        && request.resource.data.lgpd.aceitouPolitica == true
+        && request.resource.data.metadata.status == "recebida";
+
+      allow read, update, delete: if false;
+    }
+  }
+}

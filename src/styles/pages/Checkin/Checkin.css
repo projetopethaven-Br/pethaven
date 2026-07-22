@@ -1,0 +1,235 @@
+.checkin-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.checkin-page__header span {
+  color: #5266df;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.checkin-page__header h1 {
+  margin: 6px 0;
+  color: #152034;
+  font-size: 38px;
+  letter-spacing: -0.04em;
+}
+
+.checkin-page__header p {
+  margin: 0;
+  color: #718096;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.checkin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.checkin-stats article {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #e2e7ef;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.checkin-stats article > svg {
+  padding: 12px;
+  color: #fff;
+  font-size: 48px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #6278ea, #4f46e5);
+}
+
+.checkin-stats small,
+.checkin-stats strong {
+  display: block;
+}
+
+.checkin-stats small {
+  color: #7c899c;
+  font-size: 14px;
+}
+
+.checkin-stats strong {
+  margin-top: 3px;
+  color: #1d293b;
+  font-size: 27px;
+}
+
+.checkin-panel {
+  overflow: hidden;
+  border: 1px solid #e0e6ee;
+  border-radius: 21px;
+  background: #fff;
+}
+
+.checkin-toolbar {
+  padding: 18px;
+  border-bottom: 1px solid #ebeff4;
+}
+
+.checkin-toolbar label {
+  display: flex;
+  align-items: center;
+  width: min(520px, 100%);
+  min-height: 48px;
+  padding: 0 14px;
+  color: #7f8c9e;
+  border: 1px solid #dce3ec;
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.checkin-toolbar input {
+  width: 100%;
+  margin-left: 9px;
+  color: #253249;
+  font: inherit;
+  font-size: 15px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.checkin-list {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.checkin-card {
+  display: grid;
+  grid-template-columns: minmax(230px, 1.3fr) minmax(150px, 0.7fr) auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e5e9f0;
+  border-radius: 16px;
+}
+
+.checkin-card__pet {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.checkin-card__pet > span {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+  border-radius: 15px;
+  place-items: center;
+  background: linear-gradient(135deg, #5e76eb, #4f46e5);
+}
+
+.checkin-card small {
+  color: #8592a4;
+  font-size: 13px;
+}
+
+.checkin-card h2 {
+  margin: 2px 0;
+  color: #202c40;
+  font-size: 19px;
+}
+
+.checkin-card p {
+  margin: 0;
+  color: #6f7d91;
+  font-size: 14px;
+}
+
+.checkin-card__period strong {
+  display: block;
+  margin-top: 4px;
+  color: #344157;
+  font-size: 14px;
+}
+
+.checkin-status {
+  display: inline-flex;
+  min-height: 30px;
+  padding: 0 11px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 999px;
+}
+
+.checkin-status--aguardando-envio {
+  color: #996000;
+  background: #fff1d1;
+}
+
+.checkin-status--enviado {
+  color: #3455c4;
+  background: #eaf0ff;
+}
+
+.checkin-status--preenchido {
+  color: #087d59;
+  background: #e2f8ef;
+}
+
+.checkin-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.checkin-card__actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 39px;
+  padding: 0 12px;
+  color: #516076;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 750;
+  border: 1px solid #dbe2eb;
+  border-radius: 11px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.checkin-card__actions .checkin-card__whatsapp {
+  color: #fff;
+  border-color: #14a86d;
+  background: #14a86d;
+}
+
+@media (max-width: 1050px) {
+  .checkin-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .checkin-card__actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .checkin-stats,
+  .checkin-card {
+    grid-template-columns: 1fr;
+  }
+
+  .checkin-card__actions {
+    flex-direction: column;
+  }
+
+  .checkin-card__actions button {
+    justify-content: center;
+  }
+}
